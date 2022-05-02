@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="es-MX">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Piedra,Papel,Tijera</title>
+    <link rel="stylesheet" href="css/styles.css" type="text/css" />
+  </head>
+  <body>
+    <header><h1>Piedra,Papel,Tijera</h1></header>
+
+    <div class="score-board">
+      <div id="user-label" class="badge">User</div>
+      <div id="computer-label" class="badge">Comp</div>
+      <span id="user-score">0</span> : <span id="computer-score">0</span>
+    </div>
+
+    <div class="result"><p>El papel cubre la roca. ¡Tú ganas!</p></div>
+
+    <div class="choices">
+      <div id="piedra" class="choice">
+        <img
+          width="48"
+          height="48"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAACuElEQVRoge2YP0wUQRSHv7llkUOQgwIqEoTYGRNzwd5aSytsrDRqYgCjxqiwxqAWKjZ2xsYgCbUxIRaaWMLFxmg0aDQ2SkDhkDvuz+7YYLzc7sHM7K7BZL/q5t17896799ub3YWEhISEhIT/GBHHpvKF00I7E8AQIIEndHRdEfvOlaLO1RT1hgC0cQsYrrGcJ/8jBYxGnSrUBOTMjMXA25tITgJFEHfJjt8j53wDuuvcv7NGX9STCTeBgXdXkVzcXGVA3iHnSK9U7k7taq737oljMinTQACkPBVgHank14L9BUP+PQJsGoST0Lwjg+zrHz+ze6DPZ3eLG1jpFn/AGmlTacVyEXulMl6pTL2MKiv54AZCSCuchLYgSEbV1TzS83x2d71wwmdUlFZsDVQDGpCeR3XVby8tLWcCtuhRyRNLA1ZrGmFZgd9VVlZ9NrdQxC0UjXLFcg209vUG2q3WdMOY0uJSw7itiOckboBJY9th1EBhdrSXX/mXxlnrMPnl/6B9DWw8O3va+7n8qbpe6DfOGiFaDcicM+wWNh545co/ld5WKDcg569fQjJpd3bEcgtuilIDcs45BvI2gL2nHWHvmAEoTkBw+e9ngZ3piKsebVQltLd20dyZgVRsh7gWqlW8qV2IJgu7vS2GcvRRlJCYqDfZXTtDRkoNiOz4LDBda7PS5qenIssqTupCtjgDfDWtxgClXMoNiIPOCiJ1HPDf0MeB5LmKm9ZficiOvQImjQrSQ0Jqens3k+eBrHMByX3tOB0kU2Jw7LWKq3YDQiDFoDMC3NAuTI0FvObh7d026wmTSeaco0geovj4p8AHBEdE1llQDQh1nIqs8xSbAwgeA26IrVwEj6DlkE7xEOHLXTnn9G++uDoM7Ac6AbuRO7AIfAFmkdaUGLz2PqpaEhISEhIS/ht+AxYUxb9QxKFRAAAAAElFTkSuQmCC"
+        />
+      </div>
+      <div id="papel" class="choice">
+        <img
+          width="48"
+          height="48"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAD6UlEQVRoge2ZT2wbRRTGf7O2gx2Sxjg0jRocKBUnDlSKSxBwCBUcWgmJE1VzKUigXhBKCHAppOtKUIkCB45w4I8CSDnBBQhECC5wSNJLpUiUUxulaSTSNo5C6/XuPg6JIKpnx971bqgg38l+OzPve/O992bHhh3s4P8NleTi8sv7OTKVt1EcA3yECfKFN9UDL1fj8pGOayEt7qi8Q7b4EoWnAIGV6de4vgDwelwuYlFAJidT7J8/i/AC8CfwLgP2e8zZf9B3vEC6a2OguwqLn15mjf108hYwDAjwBV2Fk1GUiUeB++fHyRZHN3e6k5Xps8yVBaTAzSVobwNRUF0G6KGDM2SLI3Q/CSi4Oj1G5ZIFvBLWdTwKzNpL9B3vvWWnLwL3aoa7+P417nluN5n8pmUNFj9eViW7N6zvuGqgV7PTfeJ5qFSqbrBfc3dbzmVItYFY4CwD7IniOC4FRGN2vRs306lcts7urq2n05131s9YIxe2NhLtQr7joAkA363pJ3RwhlxxZEvXGqOyYKwNKyauWviOnqgE2FEyTOEQpDsg3Qndh0AYNvlIVAFxHK3dd1y9vVrrsXRdy4BkU6gaoEBACvmOg7XyPaw07yPZFKoFKRAcQFgkGoB4PuJ5GruH+PX2IMVMSDQAMBVyfR341dtMAQgm5dfqAwtIId0Z8zeSD0BDNMgunqdNORMSDyColepSCMIX8jakUIACQa00ZCFvQwqFPMzqFTDWQJIHWTrVngv0KYGBhUuhRE/i9vuKWntAYIC2a9W/j29BsnfiAAQFBgqp3Zpaxgz6dwIIQnbvntA3lNsqgEx+V+g5DQOQufKLiLwB7EKYQmVGVenkUhSCScDYRmWufBSxPiQ/2E/P03k6HzwKtXNy7vRD20WwUU6ZzwGRce56DLoGIbcPuodAWb34/k8yaz8eJ82oaHSQ9ZPd+8+31VkQHyAPTMlM+XBy1DYh5i7UQAHOU13c+Lw+D6szW5+2o+RrmSkfa41hAyjVwklscZprv37D+u+K6hXdiAxKJlqg1wyMr6dGBdSA/R3ijlC9YtqFxN+nTGjoXJXsD1DqBOBvAx8djFf8pnZPDZz6COF5GsiZCIQF0+Om5VcH7c9QDAPhb96tQPGD6XGo/FUD9iTwLBD+9h0NPlhfmgaELkBVsr9C1DPAjci0mseEKo2fNw2I1EHUwVPf4luHgeuRaDWHCziMNhoUuQWqh8d/xkofAH6MuoYBv0HqiHrUvtqQRxzeZMY+guJVYKjFNV3gE1zG1CN2pZkJsf7NKrN2P6gnQIaAA2z8snw30BY0BVgGLgJTeHyuBu0LcXLawQ7+6/gLI49y6NH5VIYAAAAASUVORK5CYII="
+        />
+      </div>
+      <div id="tijeras" class="choice">
+        <img
+          width="48"
+          height="48"
+          src="data:image/png;base64,iVBORw0KGgoAAAANSUhEUgAAADAAAAAwCAYAAABXAvmHAAAABmJLR0QA/wD/AP+gvaeTAAAEVUlEQVRoge2Y22scVRzHP7+Z3dlLmouTGlokIooXahUaIqjoQ0si+KK+WDAG8R8wIOINjZ2AvvVZxBcLTWrJgwk+iDfwRXzpKgilFrQaJShtc+lms7uzs5fjw3Y3687szsxmRYT5wL6c8/ud/X5nzvmd3y5ERERERET8j5FektSFhScR9RZwFCghLJHkDbnfcvorz59QBtR3lonBB8CzHiud58qRWTl5shpWhPrRGqPMFIophEeAGiJnmDh1WgTVLTewAXVhYRpRHwG3dQk7x69HXvAzoTJWGpHHUWoamAIe7KBlXiatd7ut5WtAfWPFGOQ0MBckHg8TanlZ547LE2hqCtQ08CiQCLDWukxa490CugpSy8s6d146CzwX4MtaOUeVBTQ5jqgp4ARghlwD4LpMWmPdAmKdJpRCyFw6Q3jxADNK1Iz0VCL+wXm/AK3jzPeWhTDb81crRc0JfZ4b2Cg+ZNh81S/Q8xmpjPUM8Emn+aCUtvIkzIGg4bvA58AKOp/JMetGkCTXFlIZKw28TxDxSlHaLnQUWS2U/Xb+BsKnIKvsqK/kuGUHEd2K+wwIsygOB0kubeRxssWOBlS15jX8O7BKTVth7b5ve7k3WnEbUDwVJLG8U8TJFrvGqErTwEVgBViVSeuHcBK741WFHvBLquRK2Nfyvosr1bxEj978zKuMFUZfgy1giRyvtW8zLwNdt085a2Nfz/UiYj+YwEsMUgZeaZ3wKqNxrxVUtYZ9NdcUHxswEK1+zlu2yl58pdac7yPPtw90vgeaShTlHZv8H9uUc/W3Fx9Kkjo0hJaoe22Mt1LO2Uhc36/gdirtAx5bSKEqNapOlWrRobxTalYT0TUStw4QP5AEwBhJUSw6lDbzVItlkmODTfGlrTzGcLrfBhZ9DeR+2XBlia4RH05ijKQQbe+lVQt77X+l4LC7trmXE9MwRpL7l1znT4RFhsxT7RMuAyKCxDRE19CTMfSUQSxtuK61St6pl1ER4kNJak6FWqkCStDTcRIH00isuYWuISwxZL4pd8+V+uXK08CBuw4GSnS263dAYjSNcfheME+A/RdsfukVPobiZbJbVcC3vwmD1yH2vD5dQU79PMUHk2BOQ2wY0rf7pfXeHHbAy8Cmx5ibxpZSCpq/+nzLZqCHEwa3AWEtSKKerO8+J2vD5tdQuQH2evckxVJ4id3x6oW+AB7ySzRuSdUP8naBmnORxM5vaEbH30dXgUVGzPl9qfXAawstAb4doqrc3DYi6GmjteK0swUsk+Ptflcg8DAgk9Zl4KxfYqMTTYymMQ7dg4y/CKNPeIU2+pj39qnVE+9Wwk7NAT91S6yV6i8pRBVy9TH9wNOAPPZ6Dl1/GrjSMTN8FXL1Mf2gYzMnx+Z/Bh4GPgb3v2ONKlTedYJWIVcf0w8C9bsqY00AM9T/RRsHzKrtUFjPgggJM018MInEPJ9Ho4955984xBERERERERH/JX8DRJZswd7jzNsAAAAASUVORK5CYII="
+        />
+      </div>
+
+      <p id="action-message">Haz tu movimiento.</p>
+    </div>
+    <script src="js/main.js" type="text/javascript"></script>
+  </body>
+</html>
